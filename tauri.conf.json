@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DeepSeek",
+  "version": "1.0.0",
+  "identifier": "com.deepseek.ai",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "DeepSeek",
+        "url": "https://chat.deepseek.com/",
+        "width": 1000,
+        "height": 700,
+        "minWidth": 700,
+        "minHeight": 550,
+        "additionalBrowserArgs": "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 --disable-notifications --disable-print-preview --disable-features=Autofill --disable-features=PasswordManager --disable-translate --disable-webrtc --disable-audio-input --disable-background-mode --disable-default-apps --disable-component-update --disable-plugins --disable-extensions --no-default-browser-check --disable-accelerated-2d-canvas --disable-gpu-rasterization --disable-webgl --disable-webgl2 --disable-component-extensions-with-background-pages --disable-automation --disable-blink-features=AutomationControlled --disable-save-password-bubble --disable-password-manager-reauthentication"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/deepseek.ico"],
+    "windows": {
+      "nsis": {
+        "displayLanguageSelector": false,
+        "installMode": "perMachine"
+      }
+    }
+  }
+}
